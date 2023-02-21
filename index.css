@@ -40,7 +40,7 @@ body{
   box-sizing: border-box;
 }
 
-.cell:hover {
+.cell:active {
   background-color: #eee;
 }
 
@@ -63,6 +63,11 @@ label{
   margin: 2px;
   font-weight: 600;
   cursor: pointer;
+}
+@media (hover:hover) {
+.cell:hover {
+  background-color: #eee;
+}
 }
 @media screen and (min-width:500px){
   label{
