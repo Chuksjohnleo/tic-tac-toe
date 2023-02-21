@@ -1,0 +1,85 @@
+body{
+    background-color: aqua;
+    margin: 0 auto;
+    transition: 2s;
+    opacity: 1;
+  }
+.op{
+  transition: 2s;
+  opacity: 1;
+}
+  nav{
+    font-weight: 900;
+    background-color: aqua;
+    height: 100%;
+    box-sizing: border-box;
+    padding:2%;
+    border-bottom: 9px double black;
+  }
+  .game-board {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  margin:1% auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin:0 auto;
+}
+
+.cell {
+  width: 25vw;
+  height: 25vw;
+  border: 1px solid blue;
+  font-size: x-large;
+  text-align: center;
+  cursor: pointer;
+  line-height: 25vw;
+  box-sizing: border-box;
+}
+
+.cell:hover {
+  background-color: #eee;
+}
+
+.game-status {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+label{
+  display: block;
+  margin: 5px 0;
+}
+#player{
+  font-weight: 900;
+  font-size: 2rem;
+}
+.refresh-btn{
+  background-color: black;
+  color: white;
+  margin: 2px;
+  font-weight: 600;
+  cursor: pointer;
+}
+@media screen and (min-width:500px){
+  label{
+  display:inline ;
+  margin: 5px 10px;
+}
+nav{
+  font-size: 1.1rem;
+}
+input{
+  transform: scale(2) translateY(-1px);
+  margin: 6px;
+}
+.cell {
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  font-size: 50px;
+}
+}

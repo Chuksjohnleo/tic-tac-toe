@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Keywords" content="Tic Tac Toe game, how to create a game with javascript, chuksjohnleo, Web developer, fullstack developer, web development,website creation,how to make a website">
+    <meta name="Description" content="Fullstack website developer. This  is the personal homepage of chuksjohnleo, a web developer.">
+    <link rel="canonical" href="https://chuksjohnleo.github.io/tic-tac-toe"/>
+    <link rel="shortcut icon" type="image/svg" href="images/logo.svg" />
+    <meta property="og:image" content="https://chuksjohnleo.github.io/images/logo.svg"/>
+    <meta name="og:title" content="Tic Tac Toe Game by Chuksjohnleo Fullstack website developer. You can get the source code and can equally redesign and customise the game." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="index.css">
+    <title>Tic Tac Toe</title>
+  </head>
+<body>
+  <nav>
+    <div class="nav-div" id="nav-div1"></div>
+    <div class="nav-div" id="nav-div">
+      <span>Select Mode:</span>
+      <label>
+        <input type="radio" value="multiplayer" name="mode">
+        Multiplayer
+      </label>
+      <label>
+        <input type="radio" value="computer" name="mode">
+        With Computer
+      </label>
+    </div>
+  </nav>
+  <div>
+    <audio id="playing" loop>
+      <source src="files/gameopener.wav" type="audio/wav">
+    </audio>
+    <audio id="playing2">
+      <source src="files/played.wav" type="audio/wav">
+    </audio>
+    <audio id="playing3">
+      <source src="files/gameover.wav" type="audio/wav">
+    </audio>
+    <audio id="playing4">
+      <source src="files/computersound.wav" type="audio/wav">
+    </audio>
+  </div>
+  <div><button class="refresh-btn" onclick="location.reload()">RESTART</button></div>
+  <div class="game-status" id="player">It's your turn</div>
+  <div class="game-board">
+    <div class="row">
+      <div class="cell" id="cell0" data-cell="0"></div>
+      <div class="cell" id="cell1" data-cell="1"></div>
+      <div class="cell" id="cell2" data-cell="2"></div>
+    </div>
+    <div class="row">
+      <div class="cell" id="cell3" data-cell="3"></div>
+      <div class="cell" id="cell4" data-cell="4"></div>
+      <div class="cell" id="cell5" data-cell="5"></div>
+    </div>
+    <div class="row">
+      <div class="cell" id="cell6" data-cell="6"></div>
+      <div class="cell" id="cell7" data-cell="7"></div>
+      <div class="cell" id="cell8" data-cell="8"></div>
+    </div>
+  </div>
+<script src="index.js"></script>
+</body>
+</html>
