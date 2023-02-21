@@ -21,6 +21,7 @@ const playingSound4 = document.getElementById('playing4');
 modes.forEach(mode=>{
   mode.addEventListener('click',()=>{
     playingSound.play();
+    localStorage.setItem('mode',mode.value);
   })
 });
 
@@ -62,14 +63,15 @@ cells.forEach(cell=>{
      if(confirmer)return location.reload();
      else return;
     }
-   
-    if(thePlayer%2 == 0){
+  if(localStorage.getItem('mode') === 'multiplayer'){
+    if(thePlayer%2 === 0){
       cell.textContent = 'X';
       player.textContent = "It's your friends turn";
   }else {
     cell.textContent = 'O'; 
     player.textContent = "It's your turn";
   }
+}else cell.textContent = 'X';
     humanMove();
   });
 });
@@ -202,7 +204,7 @@ function humanMove() {
     if(modes[1].checked) player.textContent = "It's computers turn";
     modes.forEach(mode=>{
        if(mode.checked && mode.value === 'computer'){
-       setTimeout(()=>computerMove(),1000);
+       setTimeout(()=>computerMove(),600);
        }else{
       if (checkWin('O')) {
     
